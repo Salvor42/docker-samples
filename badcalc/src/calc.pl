@@ -3,6 +3,12 @@ use strict;
 use warnings;
 use Mojolicious::Lite;
 
+app->config(
+    hypnotoad => {
+        pid_file => '/var/run/hypnotoad.pid',
+    }
+);
+
 
 any '/'   => sub {
     my $self = shift;
